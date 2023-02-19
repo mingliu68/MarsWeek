@@ -9,22 +9,26 @@ public class Mars {
         boolean landing = true;
 
         meals -= shipPopulation * 0.75 * 2;
-        System.out.println("There are " + meals + " meals left");
+        System.out.println("\nThere are " + meals + " meals left");
         meals += meals * 0.5;
         shipPopulation += 5;
 
         String landingLocation = "The Hill";
 
         if(landingLocation.equalsIgnoreCase("The Plain")) {
-            System.out.println("Bbzzz landing on The Plain");
+            System.out.println("\nBbzzz landing on The Plain");
         } else {
-            System.out.println("ERROR!! Flight plan already set.  Landing on the Plain.");
+            System.out.println("\nERROR!! Flight plan already set.  Landing on the Plain.");
             
         }
 
         landing = landingCheck(10);
         
         activitySetter();
+           
+        
+
+        
     }
 
 
@@ -42,7 +46,7 @@ public class Mars {
             // error if throws exceptions not included
             Thread.sleep(250);
         }
-        System.out.println("Landed");
+        System.out.println("We Have Landed!!!");
         System.out.println("\n    //\\\\" + 
                            "\n   //  \\\\" + 
                            "\n  //    \\\\" +
