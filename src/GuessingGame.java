@@ -2,18 +2,23 @@ import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
-public class GuessingGame {
+public class GuessingGame  {
 
-    public GuessingGame() {
+    public GuessingGame() throws InterruptedException {
+        
+        // greeting and get player name
         System.out.println("Hi there!");
         System.out.println("Your name please.");
         Scanner scan = new Scanner(System.in);
         String name = scan.nextLine();
         
+        // generate random number
         Random rand = new Random();
         int number = rand.nextInt(100);
         int count = 0;
         int guess;
+
+        // guessing game and check for invalid input
         while(true) {
             System.out.print("Take a guess between 1 to 100 :");
             try {
@@ -42,6 +47,7 @@ public class GuessingGame {
                 break;
             } 
         }
+
         scan.close();
 
     }

@@ -1,6 +1,9 @@
+import java.util.Scanner;
+
 public class Mars {
     public static void main(String[] args) throws InterruptedException {
-        String colonyName = "Alpha";
+
+        String colonyName = "The Dog House";
         int shipPopulation = 300;
         double meals = 4000.00;
         boolean landing = true;
@@ -19,9 +22,31 @@ public class Mars {
         }
 
         landing = landingCheck(10);
-
-        new GuessingGame();
         
+        // activity selector
+        Scanner scanner = new Scanner(System.in);
+        String activitySelection;
+
+        while (true) {
+            System.out.println("\nWhat would you like to do? A or B ?" +
+                            "\n\tA: Play the Guessing Game" +
+                            "\n\tB: Explore Mars!");
+        
+            activitySelection = scanner.nextLine();
+
+            if (activitySelection.equalsIgnoreCase("A")) {
+                System.out.println("You selected A, playing the Guessing Game.  Let's go!");
+                new GuessingGame();
+                break;
+            } else if (activitySelection.equalsIgnoreCase("B")) {
+                System.out.println("You selected A, exploring Mars.  Let's go!");
+                new MarsExpedition();
+                break;
+            } else {
+                System.out.print("Not a valid option. Try Again"); 
+            }
+        }
+
     }
 
 
