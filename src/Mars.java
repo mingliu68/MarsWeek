@@ -20,6 +20,8 @@ public class Mars {
 
         landing = landingCheck(10);
 
+        new GuessingGame();
+        
     }
 
 
