@@ -5,10 +5,9 @@ import java.util.Scanner;
 public class GuessingGame  {
 
     public GuessingGame() throws InterruptedException {
-        
+
         // greeting and get player name
-        System.out.println("Hi there!");
-        System.out.println("Your name please.");
+        System.out.print("\nHi there! Your name please: ");
         Scanner scan = new Scanner(System.in);
         String name = scan.nextLine();
         
@@ -19,6 +18,7 @@ public class GuessingGame  {
         int guess;
 
         // guessing game and check for invalid input
+        System.out.println("\n");
         while(true) {
             System.out.print("Take a guess between 1 to 100 :");
             try {

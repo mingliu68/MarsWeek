@@ -8,13 +8,13 @@ public class MarsExpedition {
         Scanner input = new Scanner(System.in);
 
         // expedition bootup
-        System.out.println("Bootup message 1 here");
+        System.out.println("\nSystem booting up...");
         Thread.sleep(500);
-        System.out.println("Bootup message 2 here");
+        System.out.println("Booting up complete... Ready...");
         // team setup
-        System.out.print("Your name please: ");
+        System.out.print("\nYour name please: ");
         String name = input.nextLine();
-        System.out.print("Hi, " + name + " — Welcome to the Expedition prep program. \nAre you ready to head out into the new world? Type Y or N: ");
+        System.out.print("\nHi, " + name + " — Welcome to the Expedition prep program. \nAre you ready to head out into the new world? Type Y or N: ");
         String answer = input.nextLine();
         if (answer.equalsIgnoreCase("Y")) {
             System.out.println("I knew you would say that. You are team leader for a reason.");
@@ -24,7 +24,7 @@ public class MarsExpedition {
         int memberCount;
 
         while(true) { 
-            System.out.print("How many people do you want on your team? ");
+            System.out.print("\nHow many people do you want on your team? ");
             try {
                 memberCount = input.nextInt();
                 break;
@@ -47,14 +47,14 @@ public class MarsExpedition {
         }
 
         // snack choice
-        System.out.print("You are allowed to bring one snack with you. What do you want to bring? ");
+        System.out.print("\nYou are allowed to bring one snack with you. What do you want to bring? ");
         input.nextLine();
         String snack = input.nextLine();
         System.out.println("Nice choice, you will be bringing a " + snack + " with you.");
 
         // vehicle selection
         
-        System.out.println("Please select your vehicle from the list below:" +
+        System.out.println("\nPlease select your vehicle from the list below:" +
                             "\n\tA: The Bat Mobile" +
                             "\n\tB: Kit" + 
                             "\n\tC: Doc's Delorean" );
@@ -72,7 +72,7 @@ public class MarsExpedition {
         }
 
         // final message
-        System.out.println("Your expedition team is now ready." +
+        System.out.println("\nYour expedition team is now ready." +
                             "\nTeam leader of your team is you, " + name + " and 2 other members." +
                             "\nYou will be bringing along a " + snack + " with your for this expedition." +
                             "\nAnd, you will be exploring Mars in style in " + vehicle + "." +

@@ -19,20 +19,53 @@ public class Mars {
             System.out.println("Bbzzz landing on The Plain");
         } else {
             System.out.println("ERROR!! Flight plan already set.  Landing on the Plain.");
+            
         }
 
         landing = landingCheck(10);
         
+        activitySetter();
+    }
+
+
+    public static boolean landingCheck(int minutesLeft) throws InterruptedException {
+        for(int minute = 0; minute <= minutesLeft; minute++) {
+            if ( minute % 2 == 0 && minute % 3 == 0) {
+                System.out.println("Keep Center");
+            } else if (minute % 2 == 0) {
+                System.out.println("Right");
+            } else if (minute % 3 == 0) {
+                System.out.println("Left");
+            } else {
+                System.out.println("Calclating;");
+            }
+            // error if throws exceptions not included
+            Thread.sleep(250);
+        }
+        System.out.println("Landed");
+        System.out.println("\n    //\\\\" + 
+                           "\n   //  \\\\" + 
+                           "\n  //    \\\\" +
+                           "\n //      \\\\" +
+                           "\n ||      ||" +
+                           "\n ||      ||" +
+                           "\n ||      ||" +
+                           "\n@||      ||@" +
+                           "\n@@@@@@@@@@@@@");
+        return false;
+    }
+
+    public static void activitySetter() throws InterruptedException {
         // activity selector
         Scanner scanner = new Scanner(System.in);
         String activitySelection;
 
         while (true) {
-            System.out.println("\nWhat would you like to do? A or B ?" +
+            System.out.println("\nChoose from the following three selections" +
                             "\n\tA: Play the Guessing Game" +
                             "\n\tB: Explore Mars!" +
-                            "\n\tC: Check out what we have found on Mars so far!");
-        
+                            "\n\tC: Check out what we have found on Mars so far! ");
+            System.out.print("\nWhat do you want to do next? A, B, or C? ");
             activitySelection = scanner.nextLine();
 
             if (activitySelection.equalsIgnoreCase("A")) {
@@ -52,26 +85,7 @@ public class Mars {
             }
         }
 
-        scanner.close();
+       scanner.close(); 
     }
-
-
-    public static boolean landingCheck(int minutesLeft) throws InterruptedException {
-        for(int minute = 0; minute <= minutesLeft; minute++) {
-            if ( minute % 2 == 0 && minute % 3 == 0) {
-                System.out.println("Keep Center");
-            } else if (minute % 2 == 0) {
-                System.out.println("Right");
-            } else if (minute % 3 == 0) {
-                System.out.println("Left");
-            } else {
-                System.out.println("Calclating;");
-            }
-            // error if throws exceptions not included
-            Thread.sleep(250);
-        }
-        System.out.println("Landed");
-        return false;
-    }
-
+    
 }
