@@ -25,9 +25,6 @@ public class Mars {
         landing = landingCheck(10);
         
         activitySetter();
-           
-        
-
         
     }
 

@@ -25,7 +25,7 @@ public class FindingsList {
 
         Thread.sleep(1000);
 
-        HashMap<String, String> fossils = new HashMap<>();
+        HashMap<String, String> fossils = new HashMap<String, String>();
         fossils.put("Bird Fossil", "The fossil has wings implying it was capable of flight");
         fossils.put("Fish Fossil", "The fossil is vaguely fish shaped implies there was once water" );
         fossils.put("Tooth Fossil", "The tooth from an unknown fossil");
